@@ -1,0 +1,651 @@
+*
+{
+    padding: 0; 
+    margin: 0;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(44, 44, 44);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar 
+{
+    width: 1.5vmin;
+    background-image: linear-gradient(45deg,red,blue,yellow,green);
+    background-size: auto 300%;
+    background-position: top;
+    border: 0.25vmin solid black;
+}
+
+::-webkit-scrollbar:hover
+{
+    transition: 2s;
+    background-position: bottom;
+}
+
+
+::-webkit-scrollbar-thumb
+{
+    background: rgba(255, 255, 255,1);
+    border: 0.25vmin solid black;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: rgba(255, 255, 255,0.5);
+}
+
+html
+{
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*, a, p, h6
+{
+    font-size: 1.5vmin;
+}
+
+h5
+{
+    font-size: 2vmin;
+}
+
+h4
+{
+    font-size: 2.5vmin;
+}
+
+h3, i
+{
+    font-size: 3vmin;
+}
+
+h2
+{
+    font-size: 3.5vmin;
+}
+
+h1
+{
+    font-size: 4vmin;
+}
+
+header
+{
+    width: 100%;
+    height: 10vmin;
+    background-color: rgb(22, 22, 22);
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 10;
+    border-bottom: 0.2vmin solid white;
+    border-top: 0.2vmin solid white;
+}
+
+footer
+{
+    width: 100%;
+    height: 10vmin;
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-top: 0.2vmin solid white;
+    border-bottom: 0.2vmin solid white;
+}
+
+header img
+{
+    height: 6vmin;
+    width: 6vmin;
+    margin-left: 6vmin;
+    transition: 1s;
+    animation: logo 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo
+{
+    from
+    {
+        transform: translateX(-20vmin);
+    }
+    to
+    {
+        transform: translateX(0vmin);
+    }
+}
+
+header img:hover
+{
+    transform: scale(1.3,1.3);
+}
+
+nav
+{
+    margin-right: 6vmin;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav > a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vmin;
+    width: 12vmin;
+    height: 6vmin;
+    margin-left: 2vmin;
+    border: 0.2vmin solid rgb(22, 22, 22);
+    transition: 1s;
+    color: white;
+    text-decoration: none;
+}
+
+nav > a:hover
+{
+    border: 0.2vmin solid white;
+}
+
+section
+{
+    width: 100%;
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section > *
+{
+    margin-left: 12vmin;
+    margin-right: 12vmin;
+}
+
+#home
+{
+    padding-top: 15vmin;
+}
+
+/* home */
+
+#home > div
+{
+    height: 40vmin;
+    width: 10vmin;
+    transform: skew(20deg);
+    border-radius: 1vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.OneParal,.OneParal::before
+{
+    background: linear-gradient(135deg, rgb(255, 0, 0), rgb(255, 136, 0));
+}
+
+.TwoParal,.TwoParal::before
+{
+    background: linear-gradient(135deg, rgb(247, 0, 255), rgb(0, 38, 255));
+}
+
+.ThreeParal,.ThreeParal::before
+{
+    background: linear-gradient(135deg, rgb(0, 255, 242), rgb(0, 255, 21));
+}
+
+.OneParal::before,.TwoParal::before,.ThreeParal::before
+{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: blur(2vmin);
+}
+
+#home > div > .Block
+{
+    position: absolute;
+    transform: skew(-20deg);
+    width: 20vmin;
+    height: 18vmin;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1vmin;
+    backdrop-filter: blur(1vmin);
+    display: flex;
+    padding-left: 3vmin;
+    padding-right: 3vmin;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    transition: 1s;
+}
+
+#home > div > .Block > button
+{
+    padding: 0.5vmin;
+    border-radius: 0.5vmin;
+    border: 0vmin solid;
+    margin-top: 1vmin;
+    height: 3vmin;
+}
+
+#home > div > .After, #home > div > .Before
+{
+    content: "";
+    position: absolute;
+    width: 7vmin;
+    height: 7vmin;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1vmin);
+    border-radius: 0.5vmin;
+    transform: skew(0deg);
+    opacity: 0;
+    transition: 1s;
+}
+
+#home > div > .After
+{
+    z-index: 2;
+}
+
+#home > div:hover, #home > div:hover > .Block
+{
+    transform: skew(0deg);
+}
+
+#home > div:hover > .Block
+{
+    height: 24vmin;
+}
+
+#home > div:hover > .After, #home > div:hover > .Before
+{
+    opacity: 1;
+}
+
+@keyframes animateAfter
+{
+    0%
+    {
+        transform: translate(-2vmin,-22vmin);
+    }
+    100%
+    {
+        transform: translate(-2vmin,-12vmin);
+    }
+}
+
+#home > div > .After
+{
+    animation: animateAfter 2s linear alternate infinite;
+}
+
+@keyframes animateBefore
+{
+    0%
+    {
+        transform: translate(5vmin,22vmin);
+    }
+    100%
+    {
+        transform: translate(5vmin,12vmin);
+    }
+}
+
+#home > div > .Before
+{
+    animation: animateBefore 2s linear alternate infinite;
+}
+
+/* section-1 */
+
+#section-1 > div
+{
+    background: linear-gradient(270deg, rgb(247, 0, 255), rgb(0, 38, 255));
+    width: 30vmin;
+    height: 20vmin;
+    border-radius: 1vmin;
+    box-shadow: 0 0 0.5vmin 0.25vmin;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    transition: 2s;
+}
+
+#section-1 > div > p
+{
+    width: 13vmin;
+    margin-left: 15vmin;
+    margin-right: auto;
+    color: white;
+}
+#section-1 > div > h5
+{
+    margin-left: 15vmin;
+    margin-right: auto;
+    margin-top: 2vmin;
+    color: white;
+}
+
+#section-1 > div::after
+{
+    content: "";
+    position: absolute;
+    width: 11vmin;
+    height: 15vmin;
+    border-radius: 1vmin;
+    background-image: url(60412cbbdd5f2d50167c591f-1.jpg);
+    background-size: cover;
+}
+
+#section-1 > div::after
+{
+    transform: translate(-17vmin, 2vmin);
+}
+
+#section-1 > div:hover
+{
+    transform: scale(1.1,1.1);
+}
+
+/* section-2 */
+
+#section-2 > button
+{
+    width: 6vmin;
+    height: 6vmin;
+    border-radius: 6vmin;
+    background: rgb(44, 44, 44);
+    border: 0 solid rgba(44, 44, 44, 0);
+    box-shadow: 0 0 0.8vmin 0.4vmin rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+i
+{
+    color: white;
+}
+
+#section-2 > button > a
+{
+    position: relative;
+    width: 6vmin;
+    height: 6vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-2 > button > a > .fa-brands
+{
+    position: relative;
+    z-index: 5;
+    transition: color 1s;
+}
+
+#section-2 > button > a::after
+{
+    content: " ";
+    width: 6vmin;
+    height: 6vmin;
+    top: -7vmin;
+    left: 0vmin;
+    background: linear-gradient(-45deg, rgb(255, 0, 0), rgb(255, 136, 0));
+    position: absolute;
+    transition: 1s;
+}
+
+#section-2 > button > a:hover::after
+{
+    top: 0vmin;
+}
+
+#section-2 > button > a:hover::after > .fa-brands
+{
+    color: rgb(0,0,0);
+}
+
+/* section-3 */
+
+#section-3 div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.Registration, .Small1, .Small2, .Middle1, .Middle2, .Big1, .Big2
+{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1vmin;
+    backdrop-filter: blur(1vmin);
+}
+
+.Registration
+{
+    width: 50vmin;
+    height: 50vmin;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Small1
+{
+    width: 5vmin;
+    height: 5vmin;
+    z-index: 4;
+    animation: small1 8s alternate infinite;
+}
+
+.Small2
+{
+    width: 7vmin;
+    height: 7vmin;
+    z-index: 6;
+    transform: translate(-40vmin, 28vmin);
+    animation: small2 8s alternate infinite;
+}
+
+.Middle1
+{
+    width: 9vmin;
+    height: 9vmin;
+    z-index: 4;
+    transform: translate(-40vmin, -26vmin);
+    animation: middle1 2s 8s alternate infinite;
+}
+
+.Middle2
+{
+    width: 10vmin;
+    height: 10vmin;
+    z-index: 6;
+    transform: translate(72vmin,10vmin);
+    animation: middle2 2s 8s alternate infinite;
+}
+
+.Big1
+{
+    width: 14vmin;
+    height: 14vmin;
+    z-index: 4;
+    transform: translate(-22vmin, -24vmin);
+    animation: big1 8s alternate infinite;
+}
+
+.Big2
+{
+    width: 15vmin;
+    height: 15vmin;
+    z-index: 6;
+    transform: translateX(4vmin);
+    animation: big2 8s alternate infinite;
+}
+
+.Registration::before, .Small1::before, .Small2::before, .Middle1::before, .Middle2::before, .Big1::before, .Big2::before
+{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: blur(2vmin);
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 38vmin;
+    height: 38vmin;
+    color: white;
+}
+
+.email, .password
+{
+    background-color: rgb(138, 138, 138);
+    width: 34vmin;
+    height: 5vmin;
+    border-radius: 5vmin;
+    margin: 2vmin 0;
+    border: 0vmin solid rgba(0, 0, 0, 0);
+    padding: 0 2vmin;
+}
+
+.auth_button
+{
+    width: 12vmin;
+    height: 5vmin;
+    border-radius: 5vmin;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0vmin solid rgba(0,0,0,0);
+    font-size: 2vmin;
+    margin-bottom: 2vmin;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+}
+
+form > label
+{
+    font-size: 4vmin;
+    border-bottom: 0.3vmin solid white;
+}
+
+form > p > a
+{
+    color: rgb(255, 123, 0);
+}
+
+@keyframes small1
+{
+    0%
+    {
+        transform: translate(27vmin, -25vmin);
+    }
+    100%
+    {
+        transform: translate(22vmin, -30vmin);
+    }
+}
+
+@keyframes small2
+{
+    0%
+    {
+        transform: translate(-40vmin, 28vmin);
+    }
+    100%
+    {
+        transform: translate(-40vmin, 33vmin);
+    }
+}
+
+@keyframes middle1
+{
+    0%
+    {
+        transform: translate(-40vmin, -26vmin);
+    }
+    100%
+    {
+        transform: translate(-40vmin, -31vmin);
+    }
+}
+
+@keyframes middle2
+{
+    0%
+    {
+        transform: translate(72vmin,10vmin);
+    }
+    100%
+    {
+        transform: translate(72vmin,15vmin);
+    }
+}
+
+@keyframes big1
+{
+    0%
+    {
+        transform: translate(-22vmin, -24vmin);
+    }
+    100%
+    {
+        transform: translate(-22vmin, -29vmin);
+    }
+}
+
+@keyframes big2
+{
+    0%
+    {
+        transform: translateX(4vmin);
+    }
+    100%
+    {
+        transform: translateX(4vmin);
+    }
+}
