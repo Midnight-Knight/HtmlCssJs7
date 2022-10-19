@@ -649,3 +649,299 @@ form > p > a
         transform: translateX(4vmin);
     }
 }
+
+/* section-4 */
+
+.GrnadBox
+{
+    width: 20vmin;
+    height: 10vmin;
+    background: linear-gradient(90deg, rgb(255, 0, 247), rgb(255, 0, 247), rgb(48, 0, 47), rgb(48, 0, 47));
+    background-size: 300%;
+    background-position: right;
+    transition: 2s;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.GrnadBox:hover
+{
+    background-position: left;
+}
+
+/* section-5 */
+
+#section-5 > div
+{
+    width: 24vmin;
+    height: 40vmin;
+    background: white;
+    box-shadow: 0vmin 0vmin 2vmin 0.5vmin;
+    border-radius: 2vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#section-5 > div::before
+{
+    position: absolute;
+    width: 24vmin;
+    height: 18vmin;
+    border-radius: 2vmin 2vmin 12vmin 12vmin;
+    transform: translateY(-22vmin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10vmin;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.Red::before
+{
+    content: "01";
+    background: red;
+}
+
+.Green::before
+{
+    content: "02";
+    background: green;
+}
+
+.Blue::before
+{
+    content: "03";
+    background: blue;
+}
+
+#section-5 > div > p
+{
+    text-align: center;
+    color:black;
+    width: 18vmin;
+}
+
+#section-5 > div > button
+{
+    width: 12vmin;
+    height: 4vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4vmin;
+    margin-top: 2vmin;
+    margin-bottom: 2vmin;
+    color: white;
+    border: 0vmin solid rgb(0, 0, 0);
+}
+
+.Red > button
+{
+    background: red;
+}
+
+.Green > button
+{
+    background: green;
+}
+
+.Blue > button
+{
+    background: blue;
+}
+
+.Red, .Green, .Blue
+{
+    opacity: 0.1;
+    transition: 2s;
+}
+
+.Red:hover, .Green:hover, .Blue:hover
+{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* section-6 */
+
+#section-6 > div
+{
+    width: 24vmin;
+    height: 36vmin;
+    background: linear-gradient(155deg, rgb(91, 118, 255) 25%, rgb(0, 19, 112) 25% 50%, rgb(0, 19, 112) 50% 70%, rgb(91, 118, 255) 70%);
+    background-size: 300%;
+    background-position: left;
+    border-radius: 2vmin;
+    transition: 2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 2s;
+}
+
+#section-6 > div:hover
+{
+    background-position: right;
+}
+
+#section-6 > div > img
+{
+    margin-top: 2vmin;
+    margin-bottom: 1vmin;
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 20vmin;
+    transition: 2s;
+}
+
+#section-6 > div > p
+{
+    width: 20vmin;
+    margin-top: 0.1vmin;
+    margin-bottom: 0.1vmin;
+    color: white;
+    text-align: center;
+    font-size: 2vmin;
+    transition: 2s;
+}
+
+#section-6 > div > button
+{
+    margin-top: 2vmin;
+    margin-bottom: 2vmin;
+    width: 12vmin;
+    height: 0vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4vmin;
+    color: rgba(255,255,255,0);
+    border: 0vmin solid rgb(0, 0, 0);
+    background: rgb(21, 0, 255);
+    transition: 2s;
+    opacity: 0;
+}
+
+#section-6 > div:hover > img
+{
+    transform: scale(0.7) translateY(-2vmin);
+}
+
+#section-6 > div:hover > p
+{
+    transform: translateY(-4vmin);
+}
+
+#section-6 > div:hover > button
+{
+    height: 4vmin;
+    opacity: 1;
+    color: white;
+    transform: translateY(-4vmin);
+}
+
+/* section-7 */
+
+.Box
+{
+    width: 24vmin;
+    height: 36vmin;
+    background: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.Box::before
+{
+    content: "";
+    position: absolute;
+    width: 24vmin;
+    height: 36vmin;
+    bottom: 50%;
+    right: 50%;
+    background: linear-gradient(0deg, transparent, rgb(0, 238, 255), rgb(0, 238, 255));
+    transform-origin: bottom right;
+    animation: polos 6s linear infinite;
+    opacity: 0;
+    transition: 2s;
+}
+
+@keyframes polos
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.Box:hover::before
+{
+    opacity: 1;
+}
+
+.Box > div
+{
+    width: 23.4vmin;
+    height: 35.4vmin;
+    z-index: 2;
+    background: rgb(72, 0, 74);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box > div::before
+{
+    content: "";
+    position: absolute;
+    width: 11.7vmin;
+    height: 35.4vmin;
+    right: 50%;
+    background: rgb(184, 0, 190);
+    box-shadow: 0.2vmin 0 0.5vmin rgba(184, 0, 190,0.5);
+}
+
+.Box > div > div
+{
+    z-index: 3;
+    width: 35.4vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Box > div > div > *
+{
+    text-align: center;
+    color: white;
+    width: 20vmin;
+    margin-top: 1vmin;
+    margin-bottom: 1vmin;
+}
+
+.Box > div > div > button
+{
+    width: 12vmin;
+    height: 4vmin;
+    border: 0vmin solid rgba(0, 0, 0, 0);
+    color: black;
+}
+
+/* section-8 */
