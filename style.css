@@ -860,6 +860,13 @@ form > p > a
     justify-content: center;
     align-items: center;
     z-index: 1;
+    opacity: 0.5;
+    transition: 2s;
+}
+
+.Box:hover
+{
+    opacity: 1;
 }
 
 .Box::before
@@ -945,3 +952,71 @@ form > p > a
 }
 
 /* section-8 */
+
+#section-8 > div
+{
+    width: 25vmin;
+    height: 40vmin;
+    border-radius: 2vmin;
+    background: linear-gradient(180deg, rgb(25, 198, 195) 30%, rgb(25, 30, 104) 30% 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+}
+
+#section-8 > div::before
+{
+    content: "";
+    position: absolute;
+    width: 25vmin;
+    height: 40vmin;
+    border-radius: 2vmin;
+    background-image: url("Dennis_Ritchie.jpg");
+    background-size: cover;
+    transition: 2s;
+    z-index: 3;
+}
+
+#section-8 > div:hover::before
+{
+    transform: scale(0.4) translateY(-20vmin);
+}
+
+.BLOCK2
+{
+    z-index: 2;
+}
+
+.BLOCK2 > div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4vmin;
+}
+
+.BLOCK2 > *
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vmin;
+    color: white;
+    margin-top: 1vmin;
+    margin-bottom: 1vmin;
+}
+
+.Button2
+{
+    width: 4vmin;
+    height: 4vmin;
+    margin-left: 0.5vmin;
+    margin-right: 0.5vmin;
+    border-radius: 4vmin;
+    background: black;
+    border: 0vmin solid rgba(0, 0, 0, 0);
+}
