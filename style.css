@@ -10,6 +10,7 @@ body
     flex-direction: column;
     align-items: center;
     background: rgb(44, 44, 44);
+    width: 100vw;
 }
 
 a
@@ -83,8 +84,8 @@ h1
 
 header
 {
-    width: 100%;
-    height: 10vmin;
+    width: 100vw;
+    height: 10vh;
     background-color: rgb(22, 22, 22);
     position: fixed;
     top: 0;
@@ -141,10 +142,12 @@ header img:hover
 
 nav
 {
-    margin-right: 6vmin;
+    margin-right: 2vmin;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 nav > a
@@ -186,7 +189,7 @@ section > *
 
 #home
 {
-    padding-top: 15vmin;
+    padding-top: 12vh;
 }
 
 /* home */
@@ -664,11 +667,13 @@ form > p > a
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 2vmin 0.4vmin rgba(0, 0, 0, 0.5);
 }
 
 .GrnadBox:hover
 {
     background-position: left;
+    box-shadow: 0 0 2vmin 0.4vmin rgba(255, 255, 255, 0.5);
 }
 
 /* section-5 */
@@ -784,6 +789,7 @@ form > p > a
     justify-content: flex-start;
     align-items: center;
     transition: 2s;
+    box-shadow: 0 0 2vmin 0.4vmin;
 }
 
 #section-6 > div:hover
@@ -862,6 +868,7 @@ form > p > a
     z-index: 1;
     opacity: 0.5;
     transition: 2s;
+    box-shadow: 0 0 2vmin 0.4vmin;
 }
 
 .Box:hover
@@ -964,6 +971,7 @@ form > p > a
     justify-content: flex-end;
     align-items: center;
     z-index: 1;
+    box-shadow: 0 0 2vmin 0.4vmin;
 }
 
 #section-8 > div::before
@@ -977,6 +985,7 @@ form > p > a
     background-size: cover;
     transition: 2s;
     z-index: 3;
+    transform: translateY(-0.1vmin);
 }
 
 #section-8 > div:hover::before
@@ -1017,6 +1026,6 @@ form > p > a
     margin-left: 0.5vmin;
     margin-right: 0.5vmin;
     border-radius: 4vmin;
-    background: black;
+    background: rgb(28, 36, 151);
     border: 0vmin solid rgba(0, 0, 0, 0);
 }
